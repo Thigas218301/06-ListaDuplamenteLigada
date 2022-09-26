@@ -170,6 +170,7 @@ void excluirPrimeiroElemento()
 	if (primeiro!=NULL) {
 		primeiro = paraExcluir->prox;
 		primeiro->ant = NULL;
+		free(paraExcluir);
 	}
 }
 
@@ -179,6 +180,7 @@ void excluirUltimoElemento()
 	if (ultimo != NULL) {
 		ultimo = paraExcluir->ant;
 		ultimo->prox = NULL;
+		free(paraExcluir);
 	}
 }
 
